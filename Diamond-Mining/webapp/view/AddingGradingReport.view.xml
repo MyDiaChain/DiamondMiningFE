@@ -1,0 +1,74 @@
+<mvc:View
+	controllerName="sap.ui.demo.fiori2.controller.AddingGradingReport"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:f="sap.f"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc">
+	<ObjectPageLayout
+		id="ObjectPageLayout"
+		showTitleInHeaderContent="true"
+		alwaysShowContentHeader="true"
+		preserveHeaderStateOnScroll="false"
+		isChildPage="true"
+		upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+		<sections>
+			<ObjectPageSection title="Grading Report">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<form:SimpleForm
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+									<m:Label text="Diamond ID"/>
+									<m:Input
+										id="diamondInput"
+										type="Text"
+										placeholder="Here is  the Diamond ID"/>
+									<m:Text text="{products>ProductId}"/>
+									<m:Label text="Responsible Entity"/>
+									<m:Input
+										id="UserNameInput"
+										type="Text"
+										placeholder="Enter your User ID"/>
+									<m:Label text="Carat"/>
+									<m:Input
+										id="CaratInput"
+										type="Text"
+										placeholder="Enter the Diamond Carat"/>
+									<m:Label text="Color"/>
+									<m:Input
+										id="DiamondColorInput"
+										type="Text"
+										placeholder="Enter the Diamond Color"/>
+									<m:Label text="Clarity"/>
+									<m:Input
+										id="DiamondClarityInput"
+										type="Text"
+										placeholder="Enter the Diamond Clarity"/>
+									<m:Label text="Cut"/>
+									<m:Input
+										id="DiamondCutInput"
+										type="Text"
+										placeholder="Enter the Diamond Cut"/>
+								</form:content>
+							</form:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>		
+	</ObjectPageLayout>
+</mvc:View>

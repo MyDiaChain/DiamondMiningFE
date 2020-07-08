@@ -1,0 +1,62 @@
+<mvc:View
+	controllerName="sap.ui.demo.fiori2.controller.AddingGradingReport"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:f="sap.f"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc">
+	<ObjectPageLayout
+		id="ObjectPageLayout"
+		showTitleInHeaderContent="true"
+		alwaysShowContentHeader="true"
+		preserveHeaderStateOnScroll="false"
+		isChildPage="true"
+		upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+		<sections>
+			<ObjectPageSection title="Log in">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<form:SimpleForm
+								maxContainerCols="1"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+									<m:Label text="User Name"/>
+									<m:Input
+										id="UserName"
+										type="Text"
+										placeholder="Enter your user name"/>
+									<m:Label text="Password"/>
+									<m:Input
+										id="Password"
+										type="Password"
+										placeholder="Enter your password"/>
+									<m:Label/>
+									<m:Button
+									text="Submit"
+									visible = "{= '0' === '0' ? 'true' : 'false' }"
+									press="onSubmit"/>
+									<m:Button
+									text="Back"
+									visible = "{= '0' === '0' ? 'true' : 'false' }"
+									press="onBack"/>
+								</form:content>
+							</form:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>		
+	</ObjectPageLayout>
+</mvc:View>

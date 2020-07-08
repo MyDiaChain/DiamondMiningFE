@@ -1,0 +1,94 @@
+<mvc:View
+	controllerName="sap.ui.demo.fiori2.controller.AddDiaInfo"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:f="sap.f"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc">
+	<ObjectPageLayout
+		id="ObjectPageLayout"
+		showTitleInHeaderContent="true"
+		alwaysShowContentHeader="true"
+		preserveHeaderStateOnScroll="false"
+		isChildPage="true"
+		upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+		<sections>
+			<ObjectPageSection title="Sales Report">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<form:SimpleForm
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+									<m:Label text="Diamond ID"/>
+									<m:Input
+										id="diamondInput"
+										type="Text"
+										placeholder="Here is  the Diamond ID"/>
+									<m:Text text="{products>ProductId}"/>
+									<m:Label text="Location"/>
+									<m:Input
+										id="locationRetail"
+										type="Text"
+										placeholder="Enter the location"/>
+									<m:Label text="Diamond Usage"/>
+									<m:Input
+										id="DiamondUsage"
+										type="Text"
+										placeholder="Enter the Diamond Usage"/>
+								</form:content>
+							</form:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection title="Customer Information">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<form:SimpleForm
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+									<m:Label text="Name"/>
+									<m:Input
+										id="customerName"
+										type="Text"
+										placeholder="Enter the customer name"/>
+									<m:Label text="Contact Information"/>
+									<m:Input
+										id="customerContact"
+										type="Text"
+										placeholder="Enter the customer email address"/>
+									<m:Label text="Selling Date"/>
+									<m:DatePicker
+										id="diamondSellingDate"
+										placeholder="Enter the selling date"/>
+								</form:content>
+							</form:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>		
+	</ObjectPageLayout>
+</mvc:View>

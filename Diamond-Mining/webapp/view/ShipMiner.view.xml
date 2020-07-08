@@ -1,0 +1,69 @@
+<mvc:View
+	controllerName="sap.ui.demo.fiori2.controller.ShipMiner"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:f="sap.f"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc">
+	<ObjectPageLayout
+		id="ObjectPageLayout"
+		showTitleInHeaderContent="true"
+		alwaysShowContentHeader="true"
+		preserveHeaderStateOnScroll="false"
+		isChildPage="true"
+		upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+		<sections>
+			<ObjectPageSection title="Shipment">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<form:SimpleForm
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+									<m:Label text="Shipment Number"/>
+									<m:Input
+										id="shipNumbInput"
+										type="Text"
+										placeholder="Here is  the Shipment Number"/>
+									<m:Text text="{products>ProductId}"/>
+									<m:Label text="Location"/>
+									<m:Input
+										id="locationMiner"
+										type="Text"
+										placeholder="Enter the location"/>
+									<m:Label text="Receiving Manufacturer"/>
+									<m:Input
+										id="RecManu"
+										type="Text"
+										placeholder="Enter the Manufacturer"/>
+									<m:Label text="Shipping Date"/>
+									<m:DatePicker
+										id="diamondShippingDateDist"
+										placeholder="Enter the shipping date"/>
+									<m:Label text="Caratr"/>
+									<m:Input
+										id="CaratMiner"
+										type="Text"
+										placeholder="Enter the Carat"/>	
+								</form:content>
+								</form:content>
+							</form:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>		
+	</ObjectPageLayout>
+</mvc:View>
